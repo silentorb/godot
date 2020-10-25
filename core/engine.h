@@ -48,7 +48,7 @@ public:
 		}
 	};
 
-private:
+public:
 	friend class Main;
 
 	uint64_t frames_drawn;

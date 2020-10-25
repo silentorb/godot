@@ -36,7 +36,7 @@
 #include "core/typedefs.h"
 
 class Main {
-
+public:
 	static void print_help(const char *p_binary);
 	static uint64_t last_ticks;
 	static uint32_t frames;

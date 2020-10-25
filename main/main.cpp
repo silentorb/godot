@@ -2029,6 +2029,7 @@ static uint64_t physics_process_max = 0;
 static uint64_t idle_process_max = 0;
 
 bool Main::iteration() {
+	return false;
 
 	//for now do not error on this
 	//ERR_FAIL_COND_V(iterating, false);
@@ -2296,4 +2297,32 @@ void Main::cleanup() {
 	unregister_core_types();
 
 	OS::get_singleton()->finalize_core();
+}
+
+MessageQueue *get_message_queue() {
+	return message_queue;
+}
+
+MainTimerSync &get_main_timer_sync() {
+	return main_timer_sync;
+}
+
+int get_fixed_fps() {
+	return fixed_fps;
+}
+
+uint64_t get_physics_process_max() {
+	return physics_process_max;
+}
+
+void set_physics_process_max(uint64_t value) {
+	physics_process_max = value;
+}
+
+uint64_t get_idle_process_max() {
+	return idle_process_max;
+}
+
+void set_idle_process_max(uint64_t value) {
+	idle_process_max = value;
 }
