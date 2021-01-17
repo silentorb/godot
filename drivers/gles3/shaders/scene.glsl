@@ -435,13 +435,13 @@ void main() {
 	float point_size = 1.0;
 
 	highp mat4 modelview = camera_inverse_matrix * world_matrix;
-	{
+
 		/* clang-format off */
 
 VERTEX_SHADER_CODE
 
 		/* clang-format on */
-	}
+
 
 	gl_PointSize = point_size;
 
